@@ -1,0 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Varela+Round&display=swap');
+*{  
+    margin : 0;                 /* 모든 HTML 요소의 기본 마진(margin)을 제거합니다. 
+                                   마진은 요소의 외부 여백으로, 요소와 다른 요소 사이의 간격을 의미합니다. */
+    padding :0;                 /* 모든 HTML 요소의 기본 패딩(padding)을 제거합니다. 
+                                   패딩은 요소의 내부 여백으로, 요소의 콘텐츠와 경계(border) 사이의 간격을 의미합니다. */
+    box-sizing: border-box;     /* 요소의 크기를 계산할 때 패딩과 보더(border)를 포함하도록 설정합니다. 
+                                   기본적으로는 크기 계산 시 콘텐츠만 포함되지만, border-box를 사용하면 패딩과 보더를 포함한 크기를 설정할 수 있습니다. */
+}
+
+a,a:link,a:visited{  
+    color: inherit;             /* 링크 텍스트의 색상을 부모 요소로부터 상속받습니다. 
+                                   즉, 링크 텍스트의 색상이 부모 요소의 텍스트 색상과 동일해집니다. */
+    text-decoration: none;      /* 링크의 밑줄을 제거합니다. 기본적으로 링크는 밑줄이 그어지지만, 이 속성으로 제거할 수 있습니다. */
+}
+
+li{  
+    list-style: none;           /* 리스트 항목의 기본 불릿(bullet) 또는 번호를 제거합니다. 
+                                   일반적으로 리스트 항목에는 불릿이나 번호가 표시되지만, 이 속성으로 이를 숨길 수 있습니다. */
+}
