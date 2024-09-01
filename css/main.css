@@ -1,0 +1,74 @@
+main {
+    width: 100%;                /* main 요소의 너비를 부모 요소의 100%로 설정하여 화면 전체를 차지하게 합니다. */
+    height: 100vh;              /* main 요소의 높이를 뷰포트 높이의 100%로 설정하여 화면 전체를 차지하게 합니다. */
+    color: white;               /* main 요소 내부의 텍스트 색상을 흰색으로 설정합니다. */
+    background: linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.8)), url('../images/me.jpg') center center; 
+                                /* 배경에 그라디언트와 이미지를 추가합니다.
+                                   - linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.8))는 검정색의 투명도를 가진 그라디언트를 상단에서 하단으로 추가합니다.
+                                   - url('../images/me.jpg')는 이미지 파일을 배경으로 설정하며, center center는 이미지를 중앙에 배치합니다. */
+    background-size: cover;     /* 배경 이미지를 요소의 크기에 맞게 조절하여 전체를 덮도록 합니다. */
+    display: flex;              /* main 요소의 자식 요소들을 플렉스 박스 레이아웃으로 배치합니다. */
+    justify-content: center;    /* 자식 요소들을 수평 중앙에 배치합니다. */
+    align-items: center;        /* 자식 요소들을 수직 중앙에 배치합니다. */
+    text-align: center;         /* main 요소 내의 텍스트를 중앙 정렬합니다. */
+}
+
+main h4 {
+    font-size: 2rem;            /* h4 제목 태그의 글꼴 크기를 2rem으로 설정합니다. */
+}
+
+main h2 {
+    font-family: 'Varela Round', sans-serif; /* h2 제목 태그의 글꼴을 'Varela Round'로 설정하며, 이 글꼴이 없을 경우 sans-serif 대체 글꼴을 사용합니다. */
+    font-size: 3.5rem;         /* h2 제목 태그의 글꼴 크기를 3.5rem으로 설정합니다. */
+    margin: 2rem 0;            /* h2 제목 태그의 상하 여백을 2rem으로 설정하고 좌우 여백은 0으로 설정합니다. */
+    letter-spacing: 3px;       /* h2 제목 태그의 글자 사이 간격을 3픽셀로 설정합니다. */
+}
+
+main p {
+    max-width: 500px;          /* 단락 요소의 최대 너비를 500픽셀로 설정합니다. */
+    margin: 0 auto;           /* 단락 요소의 상하 여백을 0으로 설정하고, 좌우 여백을 자동으로 설정하여 중앙 정렬합니다. */
+    font-size: 1.25rem;       /* 단락 텍스트의 글꼴 크기를 1.25rem으로 설정합니다. */
+}
+
+main button.download {
+    background-color: transparent; /* 'download' 클래스의 버튼 배경색을 투명하게 설정합니다. */
+    border: 3px solid white;        /* 버튼의 테두리를 3픽셀 두께의 흰색 실선으로 설정합니다. */
+    border-radius: 20px;            /* 버튼의 모서리를 20픽셀 반경으로 둥글게 만듭니다. */
+    padding: 1rem 2rem;             /* 버튼의 내부 여백을 상하 1rem, 좌우 2rem으로 설정합니다. */
+    margin-top: 3rem;               /* 버튼의 상단 여백을 3rem으로 설정합니다. */
+    color: white;                   /* 버튼 텍스트 색상을 흰색으로 설정합니다. */
+    font-weight: bold;              /* 버튼 텍스트를 굵게 설정합니다. */
+    cursor: pointer;                /* 버튼 위에 마우스를 올렸을 때 손가락 모양 커서를 표시합니다. */
+}
+
+main button.mouse {
+    background-color: transparent; /* 'mouse' 클래스의 버튼 배경색을 투명하게 설정합니다. */
+    border: none;                  /* 버튼의 테두리를 제거합니다. */
+    font-size: 2rem;               /* 버튼의 글꼴 크기를 2rem으로 설정합니다. */
+    position: absolute;            /* 버튼을 절대 위치로 설정하여 페이지 내의 특정 위치에 고정할 수 있습니다. */
+    bottom: 1rem;                  /* 버튼을 부모 요소의 하단에서 1rem 떨어진 위치에 배치합니다. */
+    left: 50%;                     /* 버튼을 부모 요소의 왼쪽에서 50% 위치로 설정합니다. */
+    transform: translateX(-50%);  /* 버튼을 수평으로 중앙에 배치하기 위해 50%만큼 왼쪽으로 이동합니다. */
+    color: white;                  /* 버튼 텍스트 색상을 흰색으로 설정합니다. */
+    animation: upDown 1s ease-in-out infinite; /* 버튼에 'upDown' 애니메이션을 1초 동안, 'ease-in-out' 타이밍 함수로 무한 반복 적용합니다. */
+}
+
+main h2 span::after {
+    content: "";                   /* 가상 요소의 내용이 비어있음을 설정합니다. */
+    height: 40px;                  /* 가상 요소의 높이를 40픽셀로 설정합니다. */
+    width: 3px;                    /* 가상 요소의 너비를 3픽셀로 설정합니다. */
+    background-color: white;      /* 가상 요소의 배경색을 흰색으로 설정합니다. */
+    display: inline-block;        /* 가상 요소를 인라인 블록으로 설정하여 텍스트와 같은 라인에 배치되도록 합니다. */
+    animation: blink .7s ease-in-out infinite; /* 가상 요소에 'blink' 애니메이션을 0.7초 동안, 'ease-in-out' 타이밍 함수로 무한 반복 적용합니다. */
+}
+
+@keyframes blink {
+    0% { opacity: 1; }           /* 'blink' 애니메이션의 시작 시점에서 가상 요소의 불투명도를 1로 설정하여 완전히 보이도록 합니다. */
+    100% { opacity: 0; }         /* 'blink' 애니메이션의 끝 시점에서 가상 요소의 불투명도를 0으로 설정하여 보이지 않도록 합니다. */
+}
+
+@keyframes upDown {
+    0% { bottom: 1rem; }         /* 'upDown' 애니메이션의 시작 시점에서 버튼의 하단 위치를 1rem으로 설정합니다. */
+    50% { bottom: 1.5rem; }     /* 애니메이션의 중간 시점에서 버튼의 하단 위치를 1.5rem으로 설정합니다. */
+    100% { bottom: 1rem; }      /* 애니메이션의 끝 시점에서 버튼의 하단 위치를 1rem으로 다시 설정합니다. */
+}
