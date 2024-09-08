@@ -14,7 +14,8 @@ main {
 }
 
 main h4 {
-    font-size: 2rem;            /* h4 제목 태그의 글꼴 크기를 2rem으로 설정합니다. */
+    font-size: 2rem; 
+    font-family: 'Varela Round',sans-serif;           /* h4 제목 태그의 글꼴 크기를 2rem으로 설정합니다. */
 }
 
 main h2 {

@@ -24,7 +24,7 @@ li{
 }
 
 /* header */
-.header{
+header{
     position: absolute;     /* 부모 요소를 기준으로 절대 위치를 지정합니다. 요소가 문서 흐름에서 제거되고, 특정 좌표에 배치됩니다. */
     top:0;                  /* 요소의 상단을 부모 요소의 상단에 맞춥니다. top: 0은 상단으로부터 0픽셀 떨어진 위치를 의미합니다. */
     width:100%;             /* 요소의 너비를 부모 요소의 너비의 100%로 설정합니다. 부모 요소에 맞게 꽉 채워지도록 합니다. */
@@ -42,7 +42,8 @@ header .container{
 header button{
     background-color: transparent; /* 버튼의 배경색을 투명으로 설정합니다. 버튼 배경이 투명해져서 배경색이 보이지 않게 됩니다. */
     border:0;                       /* 버튼의 테두리를 제거합니다. 기본 테두리가 사라집니다. */
-    cursor:pointer;                 /* 커서를 버튼 위로 가져갈 때, 커서가 손가락 모양으로 바뀌도록 설정합니다. 사용자가 클릭 가능한 요소임을 시각적으로 알립니다. */
+    cursor:pointer;     
+    color:white;            /* 커서를 버튼 위로 가져갈 때, 커서가 손가락 모양으로 바뀌도록 설정합니다. 사용자가 클릭 가능한 요소임을 시각적으로 알립니다. */
 }
 
 header h1 button{
@@ -63,6 +64,85 @@ header nav ul li button{
 }
 
 /* main */
+main {
+    width: 100%;                /* main 요소의 너비를 부모 요소의 100%로 설정하여 화면 전체를 차지하게 합니다. */
+    height: 100vh;              /* main 요소의 높이를 뷰포트 높이의 100%로 설정하여 화면 전체를 차지하게 합니다. */
+    color: white;               /* main 요소 내부의 텍스트 색상을 흰색으로 설정합니다. */
+    background: linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.8)), url('../images/me.jpg') center center; 
+                                /* 배경에 그라디언트와 이미지를 추가합니다.
+                                   - linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.8))는 검정색의 투명도를 가진 그라디언트를 상단에서 하단으로 추가합니다.
+                                   - url('../images/me.jpg')는 이미지 파일을 배경으로 설정하며, center center는 이미지를 중앙에 배치합니다. */
+    background-size: cover;     /* 배경 이미지를 요소의 크기에 맞게 조절하여 전체를 덮도록 합니다. */
+    display: flex;              /* main 요소의 자식 요소들을 플렉스 박스 레이아웃으로 배치합니다. */
+    justify-content: center;    /* 자식 요소들을 수평 중앙에 배치합니다. */
+    align-items: center;        /* 자식 요소들을 수직 중앙에 배치합니다. */
+    text-align: center;         /* main 요소 내의 텍스트를 중앙 정렬합니다. */
+}
+
+main h4 {
+    font-family: 'Varela Round',sans-serif;
+    font-size: 2rem;            /* h4 제목 태그의 글꼴 크기를 2rem으로 설정합니다. */
+}
+
+main h2 {
+    font-family: 'Varela Round', sans-serif; /* h2 제목 태그의 글꼴을 'Varela Round'로 설정하며, 이 글꼴이 없을 경우 sans-serif 대체 글꼴을 사용합니다. */
+    font-size: 3.5rem;         /* h2 제목 태그의 글꼴 크기를 3.5rem으로 설정합니다. */
+    margin: 2rem 0;            /* h2 제목 태그의 상하 여백을 2rem으로 설정하고 좌우 여백은 0으로 설정합니다. */
+    letter-spacing: 3px;       /* h2 제목 태그의 글자 사이 간격을 3픽셀로 설정합니다. */
+}
+
+main p {
+    max-width: 500px;          /* 단락 요소의 최대 너비를 500픽셀로 설정합니다. */
+    margin: 0 auto;           /* 단락 요소의 상하 여백을 0으로 설정하고, 좌우 여백을 자동으로 설정하여 중앙 정렬합니다. */
+    font-size: 1.25rem;       /* 단락 텍스트의 글꼴 크기를 1.25rem으로 설정합니다. */
+}
+
+main button.download {
+    background-color: transparent; /* 'download' 클래스의 버튼 배경색을 투명하게 설정합니다. */
+    border: 3px solid white;        /* 버튼의 테두리를 3픽셀 두께의 흰색 실선으로 설정합니다. */
+    border-radius: 20px;            /* 버튼의 모서리를 20픽셀 반경으로 둥글게 만듭니다. */
+    padding: 1rem 2rem;             /* 버튼의 내부 여백을 상하 1rem, 좌우 2rem으로 설정합니다. */
+    margin-top: 3rem;               /* 버튼의 상단 여백을 3rem으로 설정합니다. */
+    color: white;                   /* 버튼 텍스트 색상을 흰색으로 설정합니다. */
+    font-weight: bold;              /* 버튼 텍스트를 굵게 설정합니다. */
+    cursor: pointer;                /* 버튼 위에 마우스를 올렸을 때 손가락 모양 커서를 표시합니다. */
+}
+
+main button.mouse {
+    background-color: transparent; /* 'mouse' 클래스의 버튼 배경색을 투명하게 설정합니다. */
+    border: none;                  /* 버튼의 테두리를 제거합니다. */
+    font-size: 2rem;               /* 버튼의 글꼴 크기를 2rem으로 설정합니다. */
+    position: absolute;            /* 버튼을 절대 위치로 설정하여 페이지 내의 특정 위치에 고정할 수 있습니다. */
+    bottom: 1rem;                  /* 버튼을 부모 요소의 하단에서 1rem 떨어진 위치에 배치합니다. */
+    left: 50%;                     /* 버튼을 부모 요소의 왼쪽에서 50% 위치로 설정합니다. */
+    transform: translateX(-50%);  /* 버튼을 수평으로 중앙에 배치하기 위해 50%만큼 왼쪽으로 이동합니다. */
+    color: white;                  /* 버튼 텍스트 색상을 흰색으로 설정합니다. */
+    animation: upDown 1s ease-in-out infinite; /* 버튼에 'upDown' 애니메이션을 1초 동안, 'ease-in-out' 타이밍 함수로 무한 반복 적용합니다. */
+}
+
+main h2 span::after {
+    content: "";                   /* 가상 요소의 내용이 비어있음을 설정합니다. */
+    height: 40px;                  /* 가상 요소의 높이를 40픽셀로 설정합니다. */
+    width: 3px;                    /* 가상 요소의 너비를 3픽셀로 설정합니다. */
+    background-color: white;      /* 가상 요소의 배경색을 흰색으로 설정합니다. */
+    display: inline-block;        /* 가상 요소를 인라인 블록으로 설정하여 텍스트와 같은 라인에 배치되도록 합니다. */
+    animation: blink .7s ease-in-out infinite; /* 가상 요소에 'blink' 애니메이션을 0.7초 동안, 'ease-in-out' 타이밍 함수로 무한 반복 적용합니다. */
+    /*
+    글씨 뒤에 배경을 넣어서 배경이 글씨는 덮어 씌위지 않게 after를 사용해 배경을 글씨 뒤로 보냄 
+    after 가상 요소는 추가적인 디자인 요소로서, h2의 텍스트가 끝난 후 세로로 흰색 선을 표시하여 시각적 강조 효과를 줍니다.
+       이를 통해 h2 내부의 텍스트가 더욱 눈에 띄게 되며, blink 애니메이션을 통해 깜빡이는 시각 효과를 줍니다. */
+}
+
+@keyframes blink {
+    0% { opacity: 1; }           /* 'blink' 애니메이션의 시작 시점에서 가상 요소의 불투명도를 1로 설정하여 완전히 보이도록 합니다. */
+    100% { opacity: 0; }         /* 'blink' 애니메이션의 끝 시점에서 가상 요소의 불투명도를 0으로 설정하여 보이지 않도록 합니다. */
+}
+
+@keyframes upDown {
+    0% { bottom: 1rem; }         /* 'upDown' 애니메이션의 시작 시점에서 버튼의 하단 위치를 1rem으로 설정합니다. */
+    50% { bottom: 1.5rem; }     /* 애니메이션의 중간 시점에서 버튼의 하단 위치를 1.5rem으로 설정합니다. */
+    100% { bottom: 1rem; }      /* 애니메이션의 끝 시점에서 버튼의 하단 위치를 1rem으로 다시 설정합니다. */
+}
 
 
 
@@ -100,5 +180,197 @@ section .title p {
     font-size: 1.15rem; /* p 요소의 폰트 크기를 1.15rem로 설정 */
 }
 
+/* about me */
+section .about-self .left {
+    float: left; /* .left 요소를 왼쪽으로 떠서 배치 */
+    width: 50%; /* .left 요소의 너비를 부모 요소의 50%로 설정 */
+}
 
+section .about-self .left img {
+    width: 100%; /* .left 안의 img 요소의 너비를 부모 요소에 맞춰 100%로 설정 */
+}
 
+section .about-self .right {
+    width: 50%; /* .right 요소의 너비를 부모 요소의 50%로 설정 */
+    float: left; /* .right 요소를 왼쪽으로 떠서 배치 */
+    padding: 0 2rem; /* .right 요소의 좌우 패딩을 2rem로 설정, 상하는 0 */
+}
+
+section .about-self .right h3 {
+    font-size: 2.25rem; /* h3의 폰트 크기를 2.25rem로 설정 */
+    margin-bottom: 1rem; /* h3 요소의 하단 여백을 1rem으로 설정 */
+}
+
+section .about-self .right h3 strong {
+    color: #ed4848; /* strong 요소의 텍스트 색상을 빨간색 계열로 설정 */
+}
+
+section .about-self .right p {
+    font-size: 1.15rem; /* p 요소의 폰트 크기를 1.15rem로 설정 */
+    margin: 1rem 0; /* p 요소의 상하 여백을 1rem으로 설정, 좌우는 0 */
+}
+
+section .about-self .right .social a {
+    font-size: 2.5rem; /* a 요소의 폰트 크기를 2.5rem로 설정 */
+    margin-right: 0.2rem; /* a 요소의 오른쪽 여백을 0.2rem로 설정 */
+}
+
+/* what i do */
+section .do-me::after {
+    content: ""; /* 가상 요소를 추가하여 후처리를 위한 블록을 만듦 (빈 내용으로 추가) */
+    display: block; /* 가상 요소를 블록 요소로 만들어 레이아웃을 차지하게 함 */
+    clear: both; /* float된 자식 요소들을 정리하여 부모 요소의 높이를 감싸게 함 */
+}
+
+section .do-me .do-inner {
+    width: 30%; /* 내부 요소의 너비를 부모 요소의 30%로 설정 */
+    padding: 2rem; /* 내부 요소에 상하좌우 2rem의 패딩을 추가 */
+    float: left; /* 내부 요소를 왼쪽으로 플로팅하여 좌우 배치 가능하게 함 */
+    background-color: #fff; /* 내부 요소의 배경색을 흰색으로 설정 */
+    margin-right: 5%; /* 요소 간의 간격을 위해 오른쪽에 5% 마진 추가 */
+    cursor: pointer; /* 마우스가 요소 위에 있을 때 커서가 포인터(손가락)로 변경 */
+}
+/* width가 30%이고 margin-right가 5%이므로 35*3=105 마지막 부트스트랩은 다음 줄로 넘어감 
+마지막 요소는 옆에 공백 필요 없으므로 밑에서 마지막 요소만 margin-right를 0으로 만들어주기 */
+
+section .do-me .do-inner:last-child {
+    margin-right: 0; /* 마지막 내부 요소의 오른쪽 마진을 제거하여 여백 없이 배치 */
+}
+
+section .do-me .do-inner .icon i {
+    font-size: 2.5rem; /* 아이콘의 폰트 크기를 2.5rem으로 설정 */
+    color: #ff6a6a; /* 아이콘의 색상을 밝은 빨간색(#ff6a6a)으로 설정 */
+}
+
+section .do-me .do-inner .content h3 {
+    font-size: 2rem; /* h3 제목 요소의 폰트 크기를 2rem으로 설정 */
+    margin: 1rem 0; /* 제목 요소의 상하 여백을 1rem으로 설정 */
+}
+
+section .do-me .do-inner .content p {
+    font-size: 1.15rem; /* 단락 요소의 폰트 크기를 1.15rem으로 설정 */
+}
+
+section .do-me .do-inner:hover {
+    background-color: lightcoral; /* 요소에 마우스를 올렸을 때 배경색을 밝은 코랄색으로 변경 */
+    color: white; /* 요소 내부의 텍스트 색상을 흰색으로 변경 */
+}
+
+section .do-me .do-inner:hover .icon i {
+    color: white; /* 마우스를 올렸을 때 아이콘의 색상을 흰색으로 변경 */
+}
+
+/* background */
+.bg{
+    background:url("../images/background.jpg") center center;
+    background-color: cover;
+    background-attachment: fixed;
+    height:650px;
+}
+
+/* portfolio */
+section .portfolio-me::after {
+    content: ""; /* 가상 요소를 추가하여 포트폴리오의 레이아웃을 초기화하는 데 사용됨. 빈 문자열로 설정하여 실제 콘텐츠는 추가되지 않음 */
+    display: block; /* 가상 요소를 블록 요소로 설정하여 부모 요소 내의 흐름에 영향을 줌 */
+    clear: both; /* float된 자식 요소들 뒤에 이 가상 요소를 추가해 레이아웃을 정리함. 이로 인해 부모 요소가 자식 요소의 높이를 감싸지 못하는 문제를 해결함 */
+}
+
+section .portfolio-me .portfolio-inner {
+    width: 30%; /* 각 포트폴리오 항목의 너비를 부모 요소의 30%로 설정 */
+    margin-right: 5%; /* 항목들 사이에 5%의 여백을 추가해 요소 간 간격을 확보 */
+    background-color: #fff; /* 항목의 배경색을 흰색으로 설정하여 깔끔한 외관을 제공 */
+    float: left; /* 항목들을 왼쪽으로 플로팅하여 수평으로 배치되게 함 */
+    padding: 1rem 1rem 1.5rem 1rem; /* 항목의 내부 여백을 상단/좌우 1rem, 하단은 1.5rem으로 설정 */
+    border: 1px solid #ccc; /* 항목에 회색(#ccc) 테두리를 1px 두께로 추가해 구분감을 줌 */
+    margin-bottom: 3rem; /* 각 항목 하단에 3rem의 여백을 추가해 세로 간격을 확보 */
+}
+
+section .portfolio-me .portfolio-inner:nth-child(3n) {
+    margin-right: 0; /* 세 번째마다 항목의 오른쪽 여백을 없애서 마지막 항목이 정렬되게 함. 3개 단위로 배치할 때, 마지막 요소는 오른쪽 여백이 필요 없음 */
+}
+
+section .portfolio-me .portfolio-inner img {
+    width: 100%; /* 이미지의 너비를 부모 요소(포트폴리오 항목)의 너비에 맞춰 100%로 설정 */
+    display: block; /* 이미지 요소를 블록 요소로 설정하여 아래쪽의 요소가 이미지 옆에 배치되지 않고, 이미지 아래로 배치되도록 함 */
+}
+
+section .portfolio-me .portfolio-inner strong {
+    color: #fa6a6a; /* 강조된 텍스트의 색상을 밝은 빨간색 계열(#fa6a6a)로 설정 */
+    margin: 0.5rem 0; /* 강조된 텍스트 위아래에 0.5rem의 여백을 추가하여 다른 텍스트와 간격을 둠 */
+    display: block; /* 강조된 텍스트를 블록 요소로 설정하여, 다음 요소가 강조된 텍스트 옆에 오지 않고 아래에 배치되도록 함 */
+}
+
+section .portfolio-me .portfolio-inner h3 {
+    font-size: 1.75rem; /* 포트폴리오 제목의 폰트 크기를 1.75rem로 설정하여 눈에 띄게 만듦 */
+}
+
+/* contact with me */
+section .contact-me::after {
+    content: ''; /* 가상 요소를 추가하여 빈 문자열을 사용, 시각적으로는 표시되지 않지만 스타일링을 위해 존재 */
+    display: block; /* 가상 요소를 블록 요소로 설정하여 부모 요소의 레이아웃에 영향을 주도록 함 */
+    clear: both; /* float 속성이 적용된 자식 요소들이 부모 요소의 높이에 제대로 포함되지 않는 문제를 해결하기 위해 사용 */
+}
+
+section .contact-me .left {
+    width: 30%; /* 왼쪽 섹션의 너비를 부모 요소의 30%로 설정하여 레이아웃을 분할 */
+    float: left; /* 왼쪽 섹션을 왼쪽으로 떠서 배치 */
+}
+
+section .contact-me .left .card {
+    border: 1px solid #ccc; /* 카드 요소에 회색(#ccc) 테두리를 추가하여 구분선을 표시 */
+    padding: 1rem; /* 카드 내부에 상하좌우 1rem의 여백을 추가하여 내용과 테두리 간격을 확보 */
+    display: flex; /* 플렉스 박스 레이아웃을 적용하여 자식 요소들을 수평 정렬 */
+    align-items: center; /* 자식 요소들을 세로 방향으로 중앙 정렬 */
+    margin-bottom: 1.25rem; /* 카드 하단에 1.25rem의 여백을 추가하여 다음 요소와 간격을 둠 */
+}
+
+section .contact-me .left .card .icon i {
+    font-size: 2rem; /* 아이콘의 크기를 2rem으로 설정 */
+    margin-right: 15px; /* 아이콘과 텍스트 사이에 15px의 여백을 추가 */
+}
+
+section .contact-me .right {
+    width: 65%; /* 오른쪽 섹션의 너비를 부모 요소의 65%로 설정 */
+    float: left; /* 오른쪽 섹션을 왼쪽으로 떠서 배치 */
+    margin-left: 5%; /* 왼쪽 섹션과의 간격을 5%로 설정 */
+}
+
+section .contact-me .right .form-group {
+    margin-bottom: 1.25rem; /* 폼 그룹 요소들 사이에 1.25rem의 여백을 추가 */
+}
+
+section .contact-me .right .form-group label {
+    display: block; /* 라벨을 블록 요소로 설정하여 폼 컨트롤과 독립된 줄에 배치 */
+    margin-bottom: 0.85rem; /* 라벨과 입력 요소 사이에 0.85rem의 여백을 추가 */
+}
+
+section .contact-me .right .form-group input {
+    width: 100%; /* 입력 필드의 너비를 부모 요소의 100%로 설정 */
+    padding: 0.625rem; /* 입력 필드에 상하좌우 0.625rem의 여백을 추가하여 내용과 테두리 간격을 확보 */
+    outline: none; /* 입력 필드에 포커스가 있을 때 기본적인 외곽선 표시를 제거 */
+    border: 1px solid #ccc; /* 입력 필드의 테두리를 회색(#ccc)으로 설정 */
+    border-radius: 10px; /* 입력 필드의 모서리를 10px 반경으로 둥글게 설정 */
+}
+
+section .contact-me .right .form-group input:focus,
+section .contact-me .right .form-group textarea:focus {
+    border: 1px solid #719ece; /* 입력 또는 텍스트 영역에 포커스가 있을 때 테두리를 파란색(#719ece)으로 변경 */
+    box-shadow: 0 0 10px #719ece; /* 포커스가 있을 때 주변에 파란색 그림자를 추가하여 강조 */
+}
+
+section .contact-me .right .form-group textarea {
+    width: 100%; /* 텍스트 영역의 너비를 부모 요소의 100%로 설정 */
+    height: 300px; /* 텍스트 영역의 높이를 300px로 설정 */
+    outline: none; /* 포커스 시 기본 외곽선 표시를 제거 */
+    resize: none; /* 사용자가 텍스트 영역의 크기를 변경할 수 없도록 설정 */
+    border: 1px solid #ccc; /* 텍스트 영역의 테두리를 회색(#ccc)으로 설정 */
+    border-radius: 10px; /* 텍스트 영역의 모서리를 10px 반경으로 둥글게 설정 */
+}
+
+section .contact-me .right button {
+    width: 100%; /* 버튼의 너비를 부모 요소의 100%로 설정 */
+    padding: 1rem; /* 버튼에 상하좌우 1rem의 여백을 추가하여 내용과 외곽선 간격을 확보 */
+    background-color: #f78b00; /* 버튼의 배경색을 주황색(#f78b00)으로 설정 */
+    border: none; /* 버튼의 기본 테두리를 제거 */
+    color: white; /* 버튼 텍스트 색상을 흰색으로 설정 */
+}
