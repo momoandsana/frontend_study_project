@@ -2,6 +2,7 @@
 
 /* text_iife.js */
 // 텍스트 작성과 삭제 즉시 실행 함수
+//즉시 실행함수는 누가 호출 안 해도 혼자 자동으로 실행함
 (function(){
     // main 요소 내 h2 태그의 span 요소를 선택하여 변수에 할당
     const spanEl = document.querySelector("main h2 span");
@@ -82,6 +83,7 @@ const animationMove = function(selector){
     
     // ③ 이동할 대상의 화면 내 위치 계산
     const targetScrollY = targetEl.getBoundingClientRect().top + browserScrollY;
+    //현재~목표 + 페이지 상단~현재 = 페이지 상단~목표
     
     // ④ 스크롤 이동 (부드러운 애니메이션 적용)
     window.scrollTo({ top: targetScrollY, behavior: 'smooth' });
