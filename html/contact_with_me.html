@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="zxx">
+    <!-- 주력 언어가 특정되지 않을 때 사용하는 HTML 언어 코드인 zxx를 설정합니다. -->
+<head>
+    <meta charset="UTF-8"> <!-- HTML 문서의 문자 인코딩을 UTF-8로 설정하여 다양한 문자를 지원합니다. -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- 반응형 웹 디자인을 위해 viewport 설정을 하여, 화면 크기에 맞게 요소들이 조정됩니다. -->
+    <title>Contact With Me</title> <!-- 웹 페이지의 제목을 설정하며, 브라우저 탭에 표시됩니다. -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" /> 
+    <!-- Font Awesome 6.6.0 아이콘 라이브러리를 CDN을 통해 로드합니다. 이는 웹페이지에 다양한 아이콘을 사용할 수 있도록 합니다. -->
+    <link rel="stylesheet" href="../style.css"> <!-- 프로젝트의 루트 디렉토리 상위에 있는 style.css 파일을 링크하여 스타일을 적용합니다. -->
+    <link rel="stylesheet" href="../css/contact_with_me.css">
+</head>
+<body>
+    <section id="contact">
+        <div class="container">
+            <div class="title">
+                <h4>CONTATCT</h4>
+                <h2>Contact With Me</h2>
+            </div>
+            <div class="contact-me">
+                <div class="left">
+                    <div class="card">
+                        <div class="icon">
+                            <i class="fa-solid fa-phone-volume"></i>
+                        </div>
+                        <div class="info-text">
+                            <h3>phone</h3>
+                            <p>010-1234-1234</p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="icon">
+                            <i class="fa-solid fa-envelope"></i>
+                        </div>
+                        <div class="info-text">
+                            <h3>email</h3>
+                            <p>hello@gmail.com</p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="icon">
+                            <i class="fa-solid fa-location-dot"></i>
+                        </div>
+                        <div class="info-text">
+                            <h3>address</h3>
+                            <p>this must be the address</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="right">
+                    <form action="#">
+                        <div class="form-group">
+                            <label for="name">name</label>
+                            <input type="text" id="name">
+                        </div>
+                        <div class="form-group">
+                            <label for="email">email</label>
+                            <input type="text" id="email" autocomplete="off">   
+                        </div> 
+                        <div class="form-group">
+                            <label for="msg">message</label>
+                            <textarea id="msg"></textarea>
+                        </div>
+                        <button>send</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</body>
+</html> 

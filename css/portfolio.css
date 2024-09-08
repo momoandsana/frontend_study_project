@@ -1,28 +1,34 @@
-section .portfolio-me .portfolio-inner{
-    width:30%;
-    margin-right:5%;
-    background-color: #fff;
-    float:left;
-    padding: 1rem 1rem 1.5rem 1rem;
-    border:1px solid #ccc;
-    margin-bottom: 3rem;
+section .portfolio-me::after {
+    content: ""; /* 가상 요소를 추가하여 포트폴리오의 레이아웃을 초기화하는 데 사용됨. 빈 문자열로 설정하여 실제 콘텐츠는 추가되지 않음 */
+    display: block; /* 가상 요소를 블록 요소로 설정하여 부모 요소 내의 흐름에 영향을 줌 */
+    clear: both; /* float된 자식 요소들 뒤에 이 가상 요소를 추가해 레이아웃을 정리함. 이로 인해 부모 요소가 자식 요소의 높이를 감싸지 못하는 문제를 해결함 */
 }
 
-section .portfolio-me .portfolio-inner:nth-child(3n){
-    margin-right:0;
+section .portfolio-me .portfolio-inner {
+    width: 30%; /* 각 포트폴리오 항목의 너비를 부모 요소의 30%로 설정 */
+    margin-right: 5%; /* 항목들 사이에 5%의 여백을 추가해 요소 간 간격을 확보 */
+    background-color: #fff; /* 항목의 배경색을 흰색으로 설정하여 깔끔한 외관을 제공 */
+    float: left; /* 항목들을 왼쪽으로 플로팅하여 수평으로 배치되게 함 */
+    padding: 1rem 1rem 1.5rem 1rem; /* 항목의 내부 여백을 상단/좌우 1rem, 하단은 1.5rem으로 설정 */
+    border: 1px solid #ccc; /* 항목에 회색(#ccc) 테두리를 1px 두께로 추가해 구분감을 줌 */
+    margin-bottom: 3rem; /* 각 항목 하단에 3rem의 여백을 추가해 세로 간격을 확보 */
 }
 
-section .portfolio-me .portfolio-inner img{
-    width:100%;
-    display:block;
+section .portfolio-me .portfolio-inner:nth-child(3n) {
+    margin-right: 0; /* 세 번째마다 항목의 오른쪽 여백을 없애서 마지막 항목이 정렬되게 함. 3개 단위로 배치할 때, 마지막 요소는 오른쪽 여백이 필요 없음 */
 }
 
-section .portfolio-me .portfolio-inner strong{
-    color: #fa6a6a;;
-    margin:0.5rem 0;
-    display:block;
+section .portfolio-me .portfolio-inner img {
+    width: 100%; /* 이미지의 너비를 부모 요소(포트폴리오 항목)의 너비에 맞춰 100%로 설정 */
+    display: block; /* 이미지 요소를 블록 요소로 설정하여 아래쪽의 요소가 이미지 옆에 배치되지 않고, 이미지 아래로 배치되도록 함 */
 }
 
-section .portfolio-me .portfolio-inner h3{
-    font-size:1.75rem;
+section .portfolio-me .portfolio-inner strong {
+    color: #fa6a6a; /* 강조된 텍스트의 색상을 밝은 빨간색 계열(#fa6a6a)로 설정 */
+    margin: 0.5rem 0; /* 강조된 텍스트 위아래에 0.5rem의 여백을 추가하여 다른 텍스트와 간격을 둠 */
+    display: block; /* 강조된 텍스트를 블록 요소로 설정하여, 다음 요소가 강조된 텍스트 옆에 오지 않고 아래에 배치되도록 함 */
+}
+
+section .portfolio-me .portfolio-inner h3 {
+    font-size: 1.75rem; /* 포트폴리오 제목의 폰트 크기를 1.75rem로 설정하여 눈에 띄게 만듦 */
 }
