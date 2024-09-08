@@ -1,37 +1,3 @@
-section {
-    font-family: "Poppins", sans-serif; /* "Poppins" 폰트를 사용하고, 대체 폰트로 sans-serif를 설정 */
-    padding: 5rem 0; /* 상하 패딩을 5rem로 설정, 좌우는 0 */
-}
-
-section:nth-child(2n) {
-    background-color: #f8f8f8; /* 짝수 번째 section 요소의 배경색을 연한 회색(#f8f8f8)으로 설정 */
-}
-
-section .about-self::after {
-    content: ''; /* 의사 요소로 빈 콘텐츠를 추가하여 시각적으로만 존재하게 만듦. 필수 속성으로, 콘텐츠가 없어도 반드시 지정해야 함 */
-    clear: both; /* 부모 요소 안의 float된 자식 요소들이 겹치거나 빠져나가는 문제를 해결하기 위해 사용. float된 요소 뒤에 배치하여 레이아웃을 정상화함 */
-    display: block; /* 이 의사 요소를 block 요소로 만들어 공간을 차지하게 함. 이를 통해 부모 요소가 자식 요소의 높이를 정상적으로 감싸도록 함 */
-    /* 여기서 사용되는 ::after는 float된 자식 요소로 인해 부모 요소가 자식의 높이를 계산하지 못할 때, 부모의 높이를 다시 잡아주기 위해 사용됩니다. */
-}
-
-section .title {
-    margin-bottom: 3rem; /* section 내 .title 요소의 하단 여백을 3rem으로 설정 */
-}
-
-section .title h4 {
-    font-size: 1.35rem; /* h4의 폰트 크기를 1.35rem로 설정 */
-    color: #ed4848; /* 텍스트 색상을 빨간색 계열로 설정 */
-    position: relative; /* h4 요소를 상대 위치로 설정하여 미세 조정 가능하게 함 */
-}
-
-section .title h2 {
-    font-size: 3.5rem; /* h2의 폰트 크기를 3.5rem로 설정 */
-}
-
-section .title p {
-    font-size: 1.15rem; /* p 요소의 폰트 크기를 1.15rem로 설정 */
-}
-
 section .about-self .left {
     float: left; /* .left 요소를 왼쪽으로 떠서 배치 */
     width: 50%; /* .left 요소의 너비를 부모 요소의 50%로 설정 */

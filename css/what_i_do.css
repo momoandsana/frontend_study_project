@@ -1,0 +1,47 @@
+section {
+    background-color: #f8f8f8; /* 섹션의 배경색을 연한 회색(#f8f8f8)으로 설정 */
+}
+
+section .do-me::after {
+    content: ""; /* 가상 요소를 추가하여 후처리를 위한 블록을 만듦 (빈 내용으로 추가) */
+    display: block; /* 가상 요소를 블록 요소로 만들어 레이아웃을 차지하게 함 */
+    clear: both; /* float된 자식 요소들을 정리하여 부모 요소의 높이를 감싸게 함 */
+}
+
+section .do-me .do-inner {
+    width: 30%; /* 내부 요소의 너비를 부모 요소의 30%로 설정 */
+    padding: 2rem; /* 내부 요소에 상하좌우 2rem의 패딩을 추가 */
+    float: left; /* 내부 요소를 왼쪽으로 플로팅하여 좌우 배치 가능하게 함 */
+    background-color: #fff; /* 내부 요소의 배경색을 흰색으로 설정 */
+    margin-right: 5%; /* 요소 간의 간격을 위해 오른쪽에 5% 마진 추가 */
+    cursor: pointer; /* 마우스가 요소 위에 있을 때 커서가 포인터(손가락)로 변경 */
+}
+/* width가 30%이고 margin-right가 5%이므로 35*3=105 마지막 부트스트랩은 다음 줄로 넘어감 
+마지막 요소는 옆에 공백 필요 없으므로 밑에서 마지막 요소만 margin-right를 0으로 만들어주기 */
+
+section .do-me .do-inner:last-child {
+    margin-right: 0; /* 마지막 내부 요소의 오른쪽 마진을 제거하여 여백 없이 배치 */
+}
+
+section .do-me .do-inner .icon i {
+    font-size: 2.5rem; /* 아이콘의 폰트 크기를 2.5rem으로 설정 */
+    color: #ff6a6a; /* 아이콘의 색상을 밝은 빨간색(#ff6a6a)으로 설정 */
+}
+
+section .do-me .do-inner .content h3 {
+    font-size: 2rem; /* h3 제목 요소의 폰트 크기를 2rem으로 설정 */
+    margin: 1rem 0; /* 제목 요소의 상하 여백을 1rem으로 설정 */
+}
+
+section .do-me .do-inner .content p {
+    font-size: 1.15rem; /* 단락 요소의 폰트 크기를 1.15rem으로 설정 */
+}
+
+section .do-me .do-inner:hover {
+    background-color: lightcoral; /* 요소에 마우스를 올렸을 때 배경색을 밝은 코랄색으로 변경 */
+    color: white; /* 요소 내부의 텍스트 색상을 흰색으로 변경 */
+}
+
+section .do-me .do-inner:hover .icon i {
+    color: white; /* 마우스를 올렸을 때 아이콘의 색상을 흰색으로 변경 */
+}
